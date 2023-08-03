@@ -1,0 +1,23 @@
+{
+  "name": "multicallalthea",
+  "version": "1.0.0",
+  "description": "Multi Call contract deployer for Althea EVM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Chalabi",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@types/node": "^20.4.2",
+    "hardhat": "^2.17.0",
+    "hardhat-deploy": "^0.11.34",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.2",
+    "ethers": "^5.7.2"
+  }
+}
