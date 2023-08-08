@@ -4,11 +4,11 @@
 Neons dao community approached me to attempt to return the funds they had locked up in the neons dao treasury. 
 They had exchanged canto tokens for a vote and are mostly all voting to refund their canto.
 
----
+
 ## Finding Data
 I queried an archive node with the help of Brian from Ansybl and parsed through transaction data to find everyone who won an auction and how much canto they sent to the trasury. I sorted through all the winning bids and created two arrays, the amount of canto each wallet had sent the treasury since the inception of the Neons auctions and the wallet address. From there i took the amount of canto each wallet had and divided by the total amount of canto sent to the treasury to find the percentage each wallet had of the total treasury. I then multiplied the actual amount in the treasury by the percentage for each wallet to find the amount refunded.
 
-----
+
 
 ## Building the contracts
 
