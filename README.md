@@ -139,7 +139,7 @@ These contracts split the wallet and amount arrays for distribution and request 
 | 0x4826533B4897376654Bb4d4AD88B7faFD0C98528 | 6351.46 |
 | 0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf | 4869.89 |
 TOTAL: | 731,401.92
----
+
 ## Testing
 
 **Prerequisites**
@@ -166,7 +166,6 @@ npx hardhat run --network localhost ./scripts/tests/queryWallet.ts #Query the wa
 
 `npx hardhat run --network localhost .\scripts\tx\returnMasterFunds.ts` to send the tokens back to the master from the children
 
-----
 
 ## Caveats
 This contract does not consider if a wallet that has won an auction has sold or traded their Neon NFT token. We will not be able to dynamically change the data so we must agree to a "snapshot" date and then re collect the data before deploying the contract.
