@@ -3,15 +3,15 @@ import { ethers } from "hardhat";
 export async function SendEth() {
     const [sender] = await ethers.getSigners(); 
 
-    const amountToSend = ethers.utils.parseEther('750000'); // Sending 10 Ether as an example
-    const recipientAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    const amountToSend = ethers.utils.parseEther('750000');
+    const recipientAddress = "0x550b1F7345C8be53603797A13C413038352Ba5E9"
     const tx = await sender.sendTransaction({
         to: recipientAddress,
         value: amountToSend
     });
     await tx.wait();
-    const MasterBalance = await ethers.provider.getBalance("0x5FbDB2315678afecb367f032d93F642f64180aa3")
-    console.log(`Sent ${MasterBalance} Ether to ${recipientAddress}`);
+    const MasterBalance = await ethers.provider.getBalance("0x550b1F7345C8be53603797A13C413038352Ba5E9")
+    console.log(`Sent ${MasterBalance} $CANTO to ${recipientAddress}`);
 }
 
 SendEth()

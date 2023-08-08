@@ -145,9 +145,11 @@ TOTAL: | 731,401.92
 **Prerequisites**
 - NPX
 - Hardhat
+- NPM
 
 Contracts were tested on a simnet and will be tested on Canto testnet once I receive ~730k testnet Canto. Execution is succesful on the simnet. There is a function to send the tokens back to the treasury from the master and back to the master from the children. 
 
+`npm install` to download dependencies 
 `npx hardhat node` to start the simnet
 
 replace all instances of `localhost` with `canto` if you want to deploy to the canto testnet.
@@ -165,6 +167,18 @@ npx hardhat run --network localhost ./scripts/tests/queryWallet.ts #Query the wa
 `npx hardhat run --network localhost .\scripts\tx\returnTreasuryFunds.ts` to send the tokens back to the treasury from the master
 
 `npx hardhat run --network localhost .\scripts\tx\returnMasterFunds.ts` to send the tokens back to the master from the children
+
+**Testing on Canto local net passes**
+In order to run local net:
+- `git clone https://github.com/chalabi2/neons-refund`
+- `git clone https://github.com/Canto-Network/Canto`
+- `chmod +x Canto/init.sh`
+- `./Canto/init.sh`
+- `cd neons-refund`
+- `git checkout canto-local` 
+
+And then follow from the beginning and replace all instances of `localhost` with `cantolocal` and you should be able to replicate a succesful refund on a canto local net.
+
 
 
 ## Caveats

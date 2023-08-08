@@ -14,7 +14,7 @@ declare module "hardhat/types/runtime" {
   }
 }
 
-const RPCURL = "https://canto-testnet.plexnode.wtf";
+const RPCURL = "http://localhost:8545";
 const PRIVKEY = [process.env.PRIV_KEY || ''];
 
 const config: HardhatUserConfig = {
@@ -29,6 +29,11 @@ const config: HardhatUserConfig = {
       url: RPCURL,
       accounts: PRIVKEY,
       chainId: 7701,
+    },
+    cantolocal: {
+      url: RPCURL,
+      accounts: PRIVKEY,
+      chainId: 9000,
     },
     hardhat: {
       accounts: {
