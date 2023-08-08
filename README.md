@@ -6,7 +6,7 @@ They had exchanged canto tokens for a vote and are mostly all voting to refund t
 
 
 ## Finding Data
-I queried an archive node with the help of Brian from Ansybl and parsed through transaction data to find everyone who won an auction and how much canto they sent to the trasury. I sorted through all the winning bids and created two arrays, the amount of canto each wallet had sent the treasury since the inception of the Neons auctions and the wallet address. From there i took the amount of canto each wallet had and divided by the total amount of canto sent to the treasury to find the percentage each wallet had of the total treasury. I then multiplied the actual amount in the treasury by the percentage for each wallet to find the amount refunded.
+With Brian from Ansybl's assistance, I accessed an archive node to examine transaction data. This helped identify auction winners and calculate the amount of Canto they contributed to the treasury. I then compiled all winning bids into two lists: one for the sum of Canto each wallet transferred since the beginning of the Neons auctions, and another for the corresponding wallet addresses. By comparing each wallet's contribution against the total treasury deposits, I determined their individual contribution percentages. Finally, I calculated the refund amount for each wallet by multiplying the treasury's actual balance by each wallet's contribution percentage.
 
 
 
