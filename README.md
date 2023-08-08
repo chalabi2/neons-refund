@@ -174,3 +174,8 @@ This contract does not consider if a wallet that has won an auction has sold or 
 Currently the children will only deploy if the Master contract is funded.
 
 The deployer of the contracts is the only wallet able to make the calls to disburse funds.
+
+# To-Do
+- Deploy on Canto
+ - Gas Cost
+ - Run Tests
