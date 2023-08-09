@@ -10,10 +10,8 @@ export async function BatchQuery() {
         const contract = RefundBatch.attach(address);
         const owner = await contract.owner();
         const balance = await ethers.provider.getBalance(address);
-        const MasterBalance = await ethers.provider.getBalance("0x5FbDB2315678afecb367f032d93F642f64180aa3")
-        console.log(`Balance of contract at ${address}: ${ethers.utils.formatEther(balance)} ETH`);
-        console.log(`Owner of contract at ${address}: ${owner}`);
-        console.log(`Balance Remaining in Master ${MasterBalance}`)
+        const MasterBalance = await ethers.provider.getBalance("0x3Aa5ebB10DC797CAC828524e59A333d0A371443c")
+        console.log(`${address}: ${ethers.utils.formatEther(balance)} Canto`);
 
     }
 }

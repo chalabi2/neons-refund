@@ -6,7 +6,7 @@ import { ethers } from "hardhat";
 
     console.log("Deploying RefundMaster with the account:", deployer.address);
 
-    const TREASURY_ADDRESS = "0x98d1f7347FF1d0984b6daB1E1Ae3C693d2b0B380" //currently set to the public key i used;
+    const TREASURY_ADDRESS = "0xD10f179c2D1Cba52e862A02563f416fDA0401396" //currently set to the public key i used;
     const RefundMaster = await ethers.getContractFactory("RefundMaster");
     const masterContract = await RefundMaster.deploy(TREASURY_ADDRESS); 
 

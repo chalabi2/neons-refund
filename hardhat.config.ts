@@ -16,6 +16,7 @@ declare module "hardhat/types/runtime" {
 
 const RPCURL = "https://canto-testnet.plexnode.wtf";
 const PRIVKEY = [process.env.PRIV_KEY || ''];
+const RPCURLLOCAL = ""
 
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
@@ -30,14 +31,20 @@ const config: HardhatUserConfig = {
       accounts: PRIVKEY,
       chainId: 7701,
     },
-    hardhat: {
-      accounts: {
-        accountsBalance: "1000000000000000000000000", // 1 million ETH in wei
-      },
-      allowUnlimitedContractSize: true,
-      gas: "auto",  // Automatically estimate the gas
-      blockGasLimit: 100000000, 
+    cantoLocal: {
+      url: RPCURL,
+      accounts: PRIVKEY,
+      chainId: 7701,
     },
+    hardhat: {
+      forking: {
+        url: "https://canto.ansybl.io/mainnet/evm_rpc/",
+        blockNumber: 5446752,
+        httpHeaders: {
+          "X-API-KEY": "2beb9687b6d1105ecb689f7a"
+        }
+      }
+    }
   },
 };
 

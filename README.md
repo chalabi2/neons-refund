@@ -14,7 +14,7 @@ With Brian from Ansybl's assistance, I accessed an archive node to examine trans
 
 There are two contracts. 
  
- [**MASTER CONTRACT**](https://github.com/chalabi2/noundreund/)
+ [**MASTER CONTRACT**](https://github.com/chalabi2/noundreund/) 0x3Aa5ebB10DC797CAC828524e59A333d0A371443c
 
 ```solidity
 pragma solidity ^0.8.4;
@@ -65,6 +65,24 @@ This contract is in charge of receiving Canto tokens from the Neons treasury and
 ---
 
 [**CHILD CONTRACTS**](https://github.com/chalabi2/noundreund/)
+
+```
+Child 0 deployed at:  0xc6e7DF5E7b4f2A278906862b61205850344D4e7d
+Child 1 deployed at:  0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44
+Child 2 deployed at:  0x7a2088a1bFc9d81c55368AE168C2C02570cB814F
+Child 3 deployed at:  0x67d269191c92Caf3cD7723F116c85e6E9bf55933
+Child 4 deployed at:  0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB
+Child 5 deployed at:  0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8
+Child 6 deployed at:  0x95401dc811bb5740090279Ba06cfA8fcF6113778
+Child 7 deployed at:  0x4826533B4897376654Bb4d4AD88B7faFD0C98528
+Child 8 deployed at:  0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf
+Child 9 deployed at:  0x36C02dA8a0983159322a80FFE9F24b1acfF8B570
+Child 10 deployed at:  0x1291Be112d480055DaFd8a610b7d1e203891C274
+Child 11 deployed at:  0xCD8a1C3ba11CF5ECfa6267617243239504a98d90
+Child 12 deployed at:  0x7969c5eD335650692Bc04293B07F5BF2e7A673C0
+Child 13 deployed at:  0xFD471836031dc5108809D173A067e8486B9047A3
+Child 14 deployed at:  0xB0D4afd8879eD9F52b28595d31B441D079B2Ca07
+```
 
 ```solidity
 pragma solidity ^0.8.4;
@@ -121,24 +139,24 @@ contract RefundBatch {
 
 These contracts split the wallet and amount arrays for distribution and request the total amount of tokens required to refund the wallets in the wallet array for that specific child. This is done because storing a 723 entry array on chain in one transaction is not possible. Accoridng to the tests there will be 14 children contracts
 
-|   Contract   |   Canto   |
-|-------|-------|
-| 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 | 333756.89 |
-| 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707 | 104210.68 |
-| 0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6 | 66905.24 |
-| 0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e | 47751.95 |
-| 0x9A676e781A523b5d0C0e43731313A708CB607508 | 36441.29 |
-| 0x9A9f2CCfdE556A7E9Ff0848998Aa4a0CFD8863AE | 28709.61 |
-| 0xc6e7DF5E7b4f2A278906862b61205850344D4e7d | 23633.85 |
-| 0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44 | 20089.51 |
-| 0x7a2088a1bFc9d81c55368AE168C2C02570cB814F | 16725.46 |
-| 0x67d269191c92Caf3cD7723F116c85e6E9bf55933 | 13642.25 |
-| 0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB | 11337.65 |
-| 0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8 | 9305.27 |
-| 0x95401dc811bb5740090279Ba06cfA8fcF6113778 | 7670.92 |
-| 0x4826533B4897376654Bb4d4AD88B7faFD0C98528 | 6351.46 |
-| 0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf | 4869.89 |
-TOTAL: | 731,401.92
+| Contract                                      | Canto         |
+|-----------------------------------------------|---------------|
+| 0xc6e7DF5E7b4f2A278906862b61205850344D4e7d   | 309011.0 Canto|
+| 0x322813Fd9A801c5507c9de605d63CEA4f2CE6c44   | 101423.0 Canto|
+| 0x7a2088a1bFc9d81c55368AE168C2C02570cB814F   | 64093.0 Canto |
+| 0x67d269191c92Caf3cD7723F116c85e6E9bf55933   | 46915.042 Canto|
+| 0x84eA74d481Ee0A5332c457a4d796187F6Ba67fEB   | 35802.0 Canto |
+| 0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8   | 28205.0 Canto |
+| 0x95401dc811bb5740090279Ba06cfA8fcF6113778   | 23219.0 Canto |
+| 0x4826533B4897376654Bb4d4AD88B7faFD0C98528   | 19739.0 Canto |
+| 0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf   | 16433.0 Canto |
+| 0x36C02dA8a0983159322a80FFE9F24b1acfF8B570   | 13401.0 Canto |
+| 0x1291Be112d480055DaFd8a610b7d1e203891C274   | 11132.0 Canto |
+| 0xCD8a1C3ba11CF5ECfa6267617243239504a98d90   | 9143.0 Canto  |
+| 0x7969c5eD335650692Bc04293B07F5BF2e7A673C0   | 7541.0 Canto  |
+| 0xFD471836031dc5108809D173A067e8486B9047A3   | 6239.0 Canto  |
+| 0xB0D4afd8879eD9F52b28595d31B441D079B2Ca07   | 4774.0 Canto  |
+TOTAL: | 697,070
 
 ## Testing
 
@@ -174,7 +192,8 @@ Currently the children will only deploy if the Master contract is funded.
 
 The deployer of the contracts is the only wallet able to make the calls to disburse funds.
 
+Ive rounded to simplify the math and I have also spared 105 tokens in the Executor contract. 
+
 # To-Do
-- Deploy on Canto
+- Deploy on Canto Main Net
  - Gas Cost
- - Run Tests

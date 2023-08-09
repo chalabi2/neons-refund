@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-    const masterAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    const masterAddress = "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c";
     const signer = (await ethers.getSigners())[0];
 
     const RefundMaster = await ethers.getContractFactory("RefundMaster");
