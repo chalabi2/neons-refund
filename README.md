@@ -14,7 +14,7 @@ With Brian from Ansybl's assistance, I accessed an archive node to examine trans
 
 There are two contracts. 
  
- [**MASTER CONTRACT**](https://github.com/chalabi2/noundreund/) 0x3Aa5ebB10DC797CAC828524e59A333d0A371443c
+ [**MASTER CONTRACT**](https://github.com/chalabi2/noundreund/) 0x46d25eDbD36F7d33a40B7f785a3980a1EDf420A6
 
 ```solidity
 pragma solidity ^0.8.4;
@@ -193,6 +193,8 @@ Currently the children will only deploy if the Master contract is funded.
 The deployer of the contracts is the only wallet able to make the calls to disburse funds.
 
 Ive rounded to simplify the math and I have also spared 105 tokens in the Executor contract. 
+
+The current snapshot used to gather amounts only has data from Neon 4764 and below. 
 
 # To-Do
 - Deploy on Canto Main Net

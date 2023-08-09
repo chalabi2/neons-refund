@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 export async function BatchQuery() {
 
 
-        const MasterBalance = await ethers.provider.getBalance("0x3Aa5ebB10DC797CAC828524e59A333d0A371443c")
+        const MasterBalance = await ethers.provider.getBalance("0x46d25eDbD36F7d33a40B7f785a3980a1EDf420A6")
         console.log(`Balance Remaining in Master ${MasterBalance}`)
 
     }

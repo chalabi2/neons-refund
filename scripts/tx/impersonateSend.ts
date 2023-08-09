@@ -18,7 +18,7 @@ async function main() {
 
     await tx.wait();
 
-    console.log(`Sent ${ethers.utils.formatEther(amount)} ETH to ${destinationAddress}`);
+    console.log(`Sent ${ethers.utils.formatEther(amount)} Canto to ${destinationAddress}`);
 }
 
 

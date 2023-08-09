@@ -14,7 +14,7 @@ declare module "hardhat/types/runtime" {
   }
 }
 
-const RPCURL = "https://canto-testnet.plexnode.wtf";
+const RPCURL = "https://canto.evm.chandrastation.com";
 const PRIVKEY = [process.env.PRIV_KEY || ''];
 const RPCURLLOCAL = ""
 
@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
     canto: {
       url: RPCURL,
       accounts: PRIVKEY,
-      chainId: 7701,
+      chainId: 7700,
     },
     cantoLocal: {
       url: RPCURL,
@@ -38,11 +38,8 @@ const config: HardhatUserConfig = {
     },
     hardhat: {
       forking: {
-        url: "https://canto.ansybl.io/mainnet/evm_rpc/",
-        blockNumber: 5446752,
-        httpHeaders: {
-          "X-API-KEY": "2beb9687b6d1105ecb689f7a"
-        }
+        url: "https://mainnode.plexnode.org:8545",
+        blockNumber: 5449412,
       }
     }
   },

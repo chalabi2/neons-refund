@@ -6,7 +6,7 @@ import { addAddress } from "../utils/addressStorage";
 
 export async function DeployChildren() {
 
-    const masterAddress = "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c";
+    const masterAddress = "0x46d25eDbD36F7d33a40B7f785a3980a1EDf420A6";
     const RefundMaster = await ethers.getContractFactory("RefundMaster");
     const masterContract = RefundMaster.attach(masterAddress);
 
